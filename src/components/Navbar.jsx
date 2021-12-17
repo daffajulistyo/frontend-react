@@ -1,4 +1,5 @@
-import logo from '../assets/slack.png';
+import logo from '../assets/book.png';
+import {Link } from "react-router-dom";
 
 function Navbar(){
     return (
@@ -8,10 +9,10 @@ function Navbar(){
                     <ul className="nav">
                         <img src={logo} alt="" style={{ height: "40px" }}/>
                         <li>
-                            <a href="/" className="nav-link">Beranda</a>
+                            <Link to="/" className="nav-link">Beranda</Link>
                         </li>
                         <li>
-                            <a href="/manajemen-buku" className="nav-link">Manajemen Buku</a>
+                            <Link to="/manajemen-buku" className="nav-link">Manajemen Buku</Link>
                         </li>
                     </ul>
                 </div>
