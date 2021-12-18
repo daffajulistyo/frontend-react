@@ -12,6 +12,21 @@ function App() {
       {_id: 2, judul: "Bumi", pengarang: "Tere Liye", harga: 85000, stok: 4},
   ]);
 
+  function storeData(inputBook){
+    console.log(inputBook);
+    alert("Data Berhasil Ditambahkan!!");
+  }
+
+  function updateData(inputBook){
+    console.log(inputBook);
+    alert("Data Berhasil Diperbarui");
+  }
+
+  function deleteData(book){
+    console.log(book);
+    alert("Data Berhasil Dihapus");
+  }
+
   return (
     <div>
       <BrowserRouter>
@@ -21,7 +36,7 @@ function App() {
           <Beranda />
         </Route>
         <Route path="/manajemen-buku">
-          <ManajemenBuku bookList={books}/>
+          <ManajemenBuku bookList={books} store={storeData} update={updateData} remove={deleteData}/>
 
         </Route>
       </Switch>
